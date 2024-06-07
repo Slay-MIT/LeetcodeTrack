@@ -11,7 +11,7 @@ public:
         }
         if(neg == nums.size()){
             sort(nums.begin(), nums.end());
-            return nums.end();
+            return nums[nums.size() - 1];
         }
 
         for(auto it: nums){
