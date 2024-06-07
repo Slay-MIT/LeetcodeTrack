@@ -4,13 +4,14 @@ public:
         int max = INT_MIN;
         int sum = 0;
         int neg = 0;
+        bool flag = true;
         for(auto it: nums){
-            if(it < 0){
-                neg+=1;
+            if(it > 0){
+                flag = false;
             }
         }
         //to handle negative only arrays
-        if(neg == nums.size()){
+        if(flag){
             sort(nums.begin(), nums.end());
             return nums[nums.size() - 1];
         }
