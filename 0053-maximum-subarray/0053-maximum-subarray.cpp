@@ -9,13 +9,16 @@ public:
                 neg+=1;
             }
         }
+        //to handle negative only arrays
         if(neg == nums.size()){
             sort(nums.begin(), nums.end());
             return nums[nums.size() - 1];
         }
-
+        //to handle mixed arrays
         for(auto it: nums){
             sum+=it;
+
+            //if subarray has negative sum then biggest sum cannot be this, so reset 
             if(sum<0){
                 sum = 0;
             }
