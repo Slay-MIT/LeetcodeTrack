@@ -14,7 +14,6 @@ public:
                     continue;
                 }
                 else if(matrix[i][j] < target){
-                    i++;
                     break;
                 }
             }
