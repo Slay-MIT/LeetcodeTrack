@@ -1,35 +1,46 @@
 class Solution {
 public:
     vector<vector<int>> getAncestors(int n, vector<vector<int>>& edges) {
-        // Initialize adjacency list for each node and ancestors list
+        // Initialize adjacency list for the graph
         vector<vector<int>> adjacencyList(n);
-        vector<vector<int>> ancestors(n);
 
-        // Populate the adjacency list with edges
-        for (vector<int> edge : edges) {
+        // Populate the adjacency list with reversed edges
+        for (auto& edge : edges) {
             int from = edge[0];
             int to = edge[1];
-            adjacencyList[from].push_back(to);
+            adjacencyList[to].push_back(from);
         }
 
-        // Perform DFS for each node to find all its ancestors
+        vector<vector<int>> ancestorsList;
+
+        // For each node, find all its ancestors (children in reversed graph)
         for (int i = 0; i < n; i++) {
-            findAncestorsDFS(i, adjacencyList, i, ancestors);
+            vector<int> ancestors;
+            unordered_set<int> visited;
+            findChildren(i, adjacencyList, visited);
+            // Add visited nodes to the current nodes' ancestor list
+            for (int node = 0; node < n; node++) {
+                if (node == i) continue;
+                if (visited.find(node) != visited.end())
+                    ancestors.push_back(node);
+            }
+            ancestorsList.push_back(ancestors);
         }
 
-        return ancestors;
+        return ancestorsList;
     }
 
 private:
-    // Helper method to perform DFS and find ancestors
-    void findAncestorsDFS(int ancestor, vector<vector<int>>& adjacencyList,
-                          int currentNode, vector<vector<int>>& ancestors) {
-        for (int childNode : adjacencyList[currentNode]) {
-            // Check if the ancestor is already added to avoid duplicates
-            if (ancestors[childNode].empty() ||
-                ancestors[childNode].back() != ancestor) {
-                ancestors[childNode].push_back(ancestor);
-                findAncestorsDFS(ancestor, adjacencyList, childNode, ancestors);
+    // Helper method to perform DFS and find all children of a given node
+    void findChildren(int currentNode, vector<vector<int>>& adjacencyList,
+                      unordered_set<int>& visitedNodes) {
+        // Mark current node as visited
+        visitedNodes.insert(currentNode);
+
+        // Recursively traverse all neighbors
+        for (int neighbour : adjacencyList[currentNode]) {
+            if (visitedNodes.find(neighbour) == visitedNodes.end()) {
+                findChildren(neighbour, adjacencyList, visitedNodes);
             }
         }
     }
