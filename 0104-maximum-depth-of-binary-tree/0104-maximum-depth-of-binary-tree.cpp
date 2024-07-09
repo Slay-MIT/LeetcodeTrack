@@ -23,6 +23,9 @@ public:
 
     int maxDepth(TreeNode* root) {
         int maxLevel = 1;
+        if(root==nullptr){
+            return 0;
+        }
         Traverse(root, maxLevel, 1);
         return maxLevel;
     }
