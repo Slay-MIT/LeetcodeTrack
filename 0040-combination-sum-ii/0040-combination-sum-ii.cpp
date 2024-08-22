@@ -17,8 +17,10 @@ public:
                 break;
             }
 
+            //pick element
             sub.push_back(candidates[i]);
             calcSum(res, sub, candidates, target - candidates[i], i+1);
+            //not picking
             sub.pop_back();
         }
     }
