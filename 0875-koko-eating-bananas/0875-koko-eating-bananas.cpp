@@ -1,8 +1,8 @@
 class Solution {
 public:
-    long calcHours(vector<int>& piles, int hours){
+    long long calcHours(vector<int>& piles, int hours){
         
-        long total = 0;
+        long long total = 0;
         //finding total number of hours for each pile at eating speed of (int hours)
         for(auto it: piles){
             total += ceil((double)(it)/(double)(hours));
@@ -11,7 +11,7 @@ public:
     }
 
     int minEatingSpeed(vector<int>& piles, int h) {
-        int low = 1;
+        int low = 0;
         int high = *max_element(piles.begin(), piles.end());
         int ans = INT_MAX;
 
@@ -19,7 +19,7 @@ public:
         while(low <= high){
             int mid = (high + low)/2;
 
-            long totalHours = calcHours(piles, mid);
+            long long totalHours = calcHours(piles, mid);
             
             //this means that we can try and use smaller numbers to get a smaller totalHours
             if(totalHours <= h){
