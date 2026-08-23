@@ -15,4 +15,20 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0053-maximum-subarray](https://github.com/Slay-MIT/LeetcodeTrack/tree/main/0053-maximum-subarray/) | Medium |
+## Math
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1927-sum-game](https://github.com/Slay-MIT/LeetcodeTrack/tree/main/1927-sum-game/) | Medium |
+## String
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1927-sum-game](https://github.com/Slay-MIT/LeetcodeTrack/tree/main/1927-sum-game/) | Medium |
+## Greedy
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1927-sum-game](https://github.com/Slay-MIT/LeetcodeTrack/tree/main/1927-sum-game/) | Medium |
+## Game Theory
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1927-sum-game](https://github.com/Slay-MIT/LeetcodeTrack/tree/main/1927-sum-game/) | Medium |
 <!---LeetCode Topics End-->
