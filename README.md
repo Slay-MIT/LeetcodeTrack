@@ -7,6 +7,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0053-maximum-subarray](https://github.com/Slay-MIT/LeetcodeTrack/tree/main/0053-maximum-subarray/) | Medium |
+| [1752-check-if-array-is-sorted-and-rotated](https://github.com/Slay-MIT/LeetcodeTrack/tree/main/1752-check-if-array-is-sorted-and-rotated/) | Easy |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
