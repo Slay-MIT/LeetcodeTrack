@@ -9,6 +9,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0053-maximum-subarray](https://github.com/Slay-MIT/LeetcodeTrack/tree/main/0053-maximum-subarray/) | Medium |
 | [1752-check-if-array-is-sorted-and-rotated](https://github.com/Slay-MIT/LeetcodeTrack/tree/main/1752-check-if-array-is-sorted-and-rotated/) | Easy |
 | [1872-stone-game-viii](https://github.com/Slay-MIT/LeetcodeTrack/tree/main/1872-stone-game-viii/) | Hard |
+| [3718-smallest-missing-multiple-of-k](https://github.com/Slay-MIT/LeetcodeTrack/tree/main/3718-smallest-missing-multiple-of-k/) | Easy |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -48,4 +49,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1872-stone-game-viii](https://github.com/Slay-MIT/LeetcodeTrack/tree/main/1872-stone-game-viii/) | Hard |
+## Hash Table
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [3718-smallest-missing-multiple-of-k](https://github.com/Slay-MIT/LeetcodeTrack/tree/main/3718-smallest-missing-multiple-of-k/) | Easy |
 <!---LeetCode Topics End-->
